@@ -1,156 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.1 (Python 3.6.8 on linux)" generated="20190826 05:32:52.600" rpa="false">
-<suite id="s1" name="Test1" source="/home/wm/code/py3/robot1/test1.robot">
-<test id="s1-t1" name="First Case">
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
+<robot generator="Robot 3.1.1 (Python 3.6.8 on linux)" generated="20190912 05:41:23.970" rpa="false">
+<suite id="s1" name="User" source="/home/wm/code/py3/robot1/user">
+<suite id="s1-s1" name="User" source="/home/wm/code/py3/robot1/user/user.robot">
+<test id="s1-s1-t1" name="Check User">
+<kw name="Mylog" library="global">
 <arguments>
-<arg>Hello world!</arg>
-<arg>warn</arg>
+<arg>check user</arg>
 </arguments>
-<msg timestamp="20190826 05:32:52.635" level="WARN">Hello world!</msg>
-<status status="PASS" starttime="20190826 05:32:52.635" endtime="20190826 05:32:52.636"></status>
-</kw>
-<status status="PASS" starttime="20190826 05:32:52.635" endtime="20190826 05:32:52.636" critical="yes"></status>
-</test>
-<test id="s1-t2" name="Second Case">
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>1+2+3</arg>
-</arguments>
-<assign>
-<var>${res}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.637" level="INFO">${res} = 6</msg>
-<status status="PASS" starttime="20190826 05:32:52.637" endtime="20190826 05:32:52.637"></status>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${res}</arg>
-<arg>${6}</arg>
-</arguments>
-<status status="PASS" starttime="20190826 05:32:52.637" endtime="20190826 05:32:52.638"></status>
-</kw>
-<status status="PASS" starttime="20190826 05:32:52.636" endtime="20190826 05:32:52.638" critical="yes"></status>
-</test>
-<test id="s1-t3" name="Third Case">
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'i'*3</arg>
-</arguments>
-<assign>
-<var>${res}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.639" level="INFO">${res} = iii</msg>
-<status status="PASS" starttime="20190826 05:32:52.639" endtime="20190826 05:32:52.639"></status>
-</kw>
-<kw name="Length Should Be" library="BuiltIn">
-<doc>Verifies that the length of the given item is correct.</doc>
-<arguments>
-<arg>${res}</arg>
-<arg>3</arg>
-</arguments>
-<msg timestamp="20190826 05:32:52.639" level="INFO">Length is 3</msg>
-<status status="PASS" starttime="20190826 05:32:52.639" endtime="20190826 05:32:52.640"></status>
-</kw>
-<status status="PASS" starttime="20190826 05:32:52.638" endtime="20190826 05:32:52.640" critical="yes"></status>
-</test>
-<test id="s1-t4" name="Case4">
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>test1_string</arg>
-</arguments>
-<assign>
-<var>${str}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.641" level="INFO">${str} = test1_string</msg>
-<status status="PASS" starttime="20190826 05:32:52.640" endtime="20190826 05:32:52.641"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>${1,"tuple1"}</arg>
-</arguments>
-<assign>
-<var>${tuple}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.641" level="INFO">${tuple} = (1, 'tuple1')</msg>
-<status status="PASS" starttime="20190826 05:32:52.641" endtime="20190826 05:32:52.641"></status>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<doc>Returns a list containing given items.</doc>
-<arguments>
-<arg>1</arg>
-<arg>3</arg>
-<arg>"adfa"</arg>
-</arguments>
-<assign>
-<var>@{list2}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.642" level="INFO">@{list2} = [ 1 | 3 | "adfa" ]</msg>
-<status status="PASS" starttime="20190826 05:32:52.642" endtime="20190826 05:32:52.642"></status>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<arguments>
-<arg>name=zhangsan</arg>
-<arg>age=12</arg>
-</arguments>
-<assign>
-<var>&amp;{D1}</var>
-</assign>
-<msg timestamp="20190826 05:32:52.644" level="INFO">&amp;{D1} = { name=zhangsan | age=12 }</msg>
-<status status="PASS" starttime="20190826 05:32:52.642" endtime="20190826 05:32:52.644"></status>
-</kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>${str}</arg>
+<arg>${log}</arg>
 </arguments>
-<status status="PASS" starttime="20190826 05:32:52.644" endtime="20190826 05:32:52.645"></status>
+<status status="PASS" starttime="20190912 05:41:24.014" endtime="20190912 05:41:24.014"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${tuple}</arg>
-<arg>warn</arg>
-</arguments>
-<status status="PASS" starttime="20190826 05:32:52.645" endtime="20190826 05:32:52.646"></status>
+<status status="PASS" starttime="20190912 05:41:24.013" endtime="20190912 05:41:24.014"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${list2}</arg>
-</arguments>
-<status status="PASS" starttime="20190826 05:32:52.646" endtime="20190826 05:32:52.647"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${D1}</arg>
-</arguments>
-<status status="PASS" starttime="20190826 05:32:52.647" endtime="20190826 05:32:52.647"></status>
-</kw>
-<status status="PASS" starttime="20190826 05:32:52.640" endtime="20190826 05:32:52.648" critical="yes"></status>
+<status status="PASS" starttime="20190912 05:41:24.011" endtime="20190912 05:41:24.014" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20190826 05:32:52.601" endtime="20190826 05:32:52.649"></status>
+<test id="s1-s1-t2" name="Add User">
+<kw name="Mylog" library="global">
+<arguments>
+<arg>new user</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${log}</arg>
+</arguments>
+<status status="PASS" starttime="20190912 05:41:24.015" endtime="20190912 05:41:24.016"></status>
+</kw>
+<status status="PASS" starttime="20190912 05:41:24.015" endtime="20190912 05:41:24.016"></status>
+</kw>
+<status status="PASS" starttime="20190912 05:41:24.015" endtime="20190912 05:41:24.016" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190912 05:41:24.009" endtime="20190912 05:41:24.017"></status>
+</suite>
+<status status="PASS" starttime="20190912 05:41:23.971" endtime="20190912 05:41:24.018"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="Test1">Test1</stat>
+<stat pass="2" fail="0" id="s1" name="User">User</stat>
+<stat pass="2" fail="0" id="s1-s1" name="User">User.User</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190826 05:32:52.635" level="WARN">Hello world!</msg>
+<msg timestamp="20190912 05:41:23.966" level="ERROR">Error in file '/home/wm/code/py3/robot1/user/__init__.robot': Non-existing setting 'Suit setup'.</msg>
+<msg timestamp="20190912 05:41:23.966" level="ERROR">Error in file '/home/wm/code/py3/robot1/user/user.robot': Non-existing setting 'Suit setup'.</msg>
+<msg timestamp="20190912 05:41:23.967" level="ERROR">Error in file '/home/wm/code/py3/robot1/user/user.robot': Invalid syntax in keyword 'Get User Info': Non-existing setting 'Documents'.</msg>
 </errors>
 </robot>
