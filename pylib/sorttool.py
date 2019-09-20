@@ -6,6 +6,8 @@ def magic_sort(data=[{}], order="id desc"):
     '''
     @param    data    list        item is a dict  
     @param    order   string      order like sql "id desc, status asc"
+    @return   data    list        sorted data
+    @todo   order by field
     '''
     orderArr = []
     for item in order.lower().split(","):
